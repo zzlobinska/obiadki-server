@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "singularName": "recipe",
+    "pluralName": "recipes",
+    "displayName": "recipes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "portion_number": {
+      "type": "integer"
+    },
+    "prepare_time": {
+      "type": "string"
+    },
+    "ingredients": {
+      "displayName": "ingredients",
+      "type": "component",
+      "repeatable": true,
+      "component": "ingredients.ingredients"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "thumbnail": {
+      "type": "string"
+    }
+  }
+}
