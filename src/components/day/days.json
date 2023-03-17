@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_day_days",
+  "info": {
+    "displayName": "Days",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "recipe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recipe.recipe"
+    },
+    "isDisabled": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
